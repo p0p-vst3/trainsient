@@ -22,6 +22,10 @@ TrainsientAudioProcessor::TrainsientAudioProcessor()
                        )
 #endif
 {
+    addParameter(new juce::AudioParameterFloat("attackGain", "Attack Gain", 0.0f, 2.0f, 1.0f));
+    addParameter(new juce::AudioParameterFloat("sustainGain", "Sustain Gain", 0.0f, 2.0f, 1.0f));
+    addParameter(new juce::AudioParameterFloat("attackTime", "Attack Time", 1.0f, 100.0f, 10.0f));
+    addParameter(new juce::AudioParameterFloat("sustainTime", "Sustain Time", 1.0f, 100.0f, 10.0f));
 }
 
 TrainsientAudioProcessor::~TrainsientAudioProcessor()
